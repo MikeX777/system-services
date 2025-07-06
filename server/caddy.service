@@ -1,0 +1,10 @@
+[Unit]
+Description=Starting Caddy on Start of Server
+After=multi-user.target
+
+[Service]
+ExecStart=/etc/caddy caddy adapt && caddy run
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
